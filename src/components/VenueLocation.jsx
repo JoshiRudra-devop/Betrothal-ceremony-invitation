@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Navigation, Compass } from 'lucide-react';
+import { MapPin, Navigation, Compass, Phone } from 'lucide-react';
 import { INVITATION_CONTENT } from '../config/invitationContent';
 import { PalaceArch } from './DecorativeMotifs/PalaceArch';
 
@@ -42,8 +42,27 @@ export const VenueLocation = () => {
                 </h3>
               </div>
 
+              {/* Contact Phone Numbers */}
+              <div className="pt-1 space-y-2">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-rose-900 font-sans font-bold block">
+                  Contact Mobile Numbers:
+                </span>
+                <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                  {INVITATION_CONTENT.contactNumbers.map((c, i) => (
+                    <a
+                      key={i}
+                      href={`tel:${c.raw}`}
+                      className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-ivory/95 border border-rose-300/80 text-rose-900 font-sans text-xs font-semibold shadow-sm hover:bg-rose-100 hover:scale-105 transition-all duration-300"
+                    >
+                      <Phone className="w-3.5 h-3.5 text-rose-600 shrink-0" />
+                      <span>m.no: {c.raw}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
               {/* Get Directions Button */}
-              <div>
+              <div className="pt-2">
                 <a
                   href={isTokenPlaceholder ? "#" : INVITATION_CONTENT.googleMapLink}
                   onClick={(e) => {

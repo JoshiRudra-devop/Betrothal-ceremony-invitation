@@ -28,6 +28,11 @@ export const INVITATION_CONTENT = {
   ceremonyTime: "10:30 AM onwards",
   venueName: "Mayur Restaurant",
   venueAddress: "Jasons Nagar",
+  contactNumbers: [
+    { number: "9328201463", raw: "9328201463" },
+    { number: "9904904610", raw: "9904904610" },
+    { number: "9377196244", raw: "9377196244" }
+  ],
 
   // Venue Links & Map Token Placeholders
   googleMapLink: "[GOOGLE MAP LINK]",
