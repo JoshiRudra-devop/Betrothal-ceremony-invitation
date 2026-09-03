@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 import { LoadingScreen } from './components/LoadingScreen';
+import { Navbar } from './components/Navbar';
 import { AudioPlayer } from './components/AudioPlayer';
 import { EnvelopeHero } from './components/EnvelopeHero';
 import { CoupleIntro } from './components/CoupleIntro';
@@ -57,6 +58,9 @@ export function App() {
         trigger={triggerCelebration}
         onClose={() => setTriggerCelebration(false)}
       />
+
+      {/* Top Floating Glassmorphic Navbar with Custom Floral Monogram Logo */}
+      <Navbar isEnvelopeOpened={isEnvelopeOpened} />
 
       {/* Main Single Continuous Scroll Journey */}
       <main className="w-full flex flex-col flex-1">
