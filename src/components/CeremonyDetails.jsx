@@ -6,7 +6,6 @@ import { GoldFilagreeBorder } from './DecorativeMotifs/GoldFilagreeBorder';
 import { PaisleyMotif } from './DecorativeMotifs/PaisleyMotif';
 import { RingCeremonyMotif } from './DecorativeMotifs/RingCeremonyMotif';
 import { FloralClimberVine } from './DecorativeMotifs/FloralClimberVine';
-import { AddToCalendarButton } from './AddToCalendarButton';
 
 export const CeremonyDetails = () => {
   const details = [
@@ -100,11 +99,6 @@ export const CeremonyDetails = () => {
             })}
           </div>
         </GoldFilagreeBorder>
-
-        {/* Add to Calendar Button */}
-        <div className="mt-8 flex justify-center">
-          <AddToCalendarButton />
-        </div>
 
       </div>
     </section>
