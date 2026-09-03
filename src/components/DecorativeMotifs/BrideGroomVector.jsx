@@ -1,12 +1,10 @@
 import React from 'react';
 
 export const BrideVector = ({ className = "w-28 h-28 sm:w-36 sm:h-36" }) => {
-  const flowerColors = ["#D81B60", "#2196F3", "#AB47BC", "#FFB300", "#D81B60", "#2196F3", "#AB47BC", "#FFB300"];
-
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
-      {/* Outer Decorative Glow & Multicoloured Floral Frame */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-pink-300 via-rose-400 to-purple-500 p-1.5 shadow-rose-glow">
+      {/* Outer Decorative Glow & Floral Wreath Frame */}
+      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-pink-200 via-rose-400 to-purple-400 p-1.5 shadow-rose-glow">
         <div className="w-full h-full rounded-full overflow-hidden border-2 border-ivory bg-cream shadow-inner">
           <img
             src="/assets/bride.jpg"
@@ -15,30 +13,84 @@ export const BrideVector = ({ className = "w-28 h-28 sm:w-36 sm:h-36" }) => {
           />
         </div>
       </div>
-      {/* Outer Multicoloured Floral Beaded Border Overlay */}
-      <svg className="absolute -inset-2 w-[calc(100%+16px)] h-[calc(100%+16px)] pointer-events-none" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="47" stroke="#D4AF37" strokeWidth="1.2" strokeDasharray="3 3" fill="none" opacity="0.8" />
-        {[0, 45, 90, 135, 180, 225, 270, 315].map((deg, i) => (
-          <circle
-            key={i}
-            cx={50 + 47 * Math.cos((deg * Math.PI) / 180)}
-            cy={50 + 47 * Math.sin((deg * Math.PI) / 180)}
-            r="3"
-            fill={flowerColors[i]}
-          />
-        ))}
+
+      {/* Aesthetic Multicoloured Floral Wreath Overlay */}
+      <svg className="absolute -inset-3 w-[calc(100%+24px)] h-[calc(100%+24px)] pointer-events-none" viewBox="0 0 120 120" fill="none">
+        <defs>
+          <linearGradient id="brideVineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#FFB300" />
+            <stop offset="50%" stopColor="#81C784" />
+            <stop offset="100%" stopColor="#D4AF37" />
+          </linearGradient>
+        </defs>
+
+        {/* Circular Gold & Leaf Vine Stem */}
+        <circle cx="60" cy="60" r="54" stroke="url(#brideVineGrad)" strokeWidth="1.5" strokeDasharray="6 3" opacity="0.85" />
+
+        {/* Floral Blossom Clusters Encircling the Frame */}
+        {/* Blossom 1 (Top Center: Magenta Rose) */}
+        <g transform="translate(60, 6)">
+          <circle cx="0" cy="0" r="5.5" fill="#D81B60" />
+          <circle cx="0" cy="0" r="3.5" fill="#FF80AB" />
+          <circle cx="0" cy="0" r="1.5" fill="#880E4F" />
+          <path d="M-6,0 C-8,-4 -2,-6 0,-4 C2,-6 8,-4 6,0 Z" fill="#FF80AB" opacity="0.8" />
+        </g>
+
+        {/* Blossom 2 (Top Right: Cornflower Blue) */}
+        <g transform="translate(98, 22)">
+          <circle cx="0" cy="0" r="5" fill="#2196F3" />
+          <circle cx="0" cy="0" r="3" fill="#90CAF9" />
+          <circle cx="0" cy="0" r="1.2" fill="#0D47A1" />
+        </g>
+
+        {/* Blossom 3 (Right Center: Lavender Violet) */}
+        <g transform="translate(114, 60)">
+          <circle cx="0" cy="0" r="5.5" fill="#AB47BC" />
+          <circle cx="0" cy="0" r="3.5" fill="#E1BEE7" />
+          <circle cx="0" cy="0" r="1.5" fill="#4A148C" />
+        </g>
+
+        {/* Blossom 4 (Bottom Right: Gold Marigold) */}
+        <g transform="translate(98, 98)">
+          <circle cx="0" cy="0" r="5" fill="#FFB300" />
+          <circle cx="0" cy="0" r="3" fill="#FFE082" />
+          <circle cx="0" cy="0" r="1.2" fill="#E65100" />
+        </g>
+
+        {/* Blossom 5 (Bottom Center: Magenta Rose) */}
+        <g transform="translate(60, 114)">
+          <circle cx="0" cy="0" r="5.5" fill="#D81B60" />
+          <circle cx="0" cy="0" r="3.5" fill="#FF80AB" />
+          <circle cx="0" cy="0" r="1.5" fill="#880E4F" />
+        </g>
+
+        {/* Blossom 6 (Bottom Left: Cornflower Blue) */}
+        <g transform="translate(22, 98)">
+          <circle cx="0" cy="0" r="5" fill="#2196F3" />
+          <circle cx="0" cy="0" r="3" fill="#90CAF9" />
+        </g>
+
+        {/* Blossom 7 (Left Center: Lavender Violet) */}
+        <g transform="translate(6, 60)">
+          <circle cx="0" cy="0" r="5.5" fill="#AB47BC" />
+          <circle cx="0" cy="0" r="3.5" fill="#E1BEE7" />
+        </g>
+
+        {/* Blossom 8 (Top Left: Gold Marigold) */}
+        <g transform="translate(22, 22)">
+          <circle cx="0" cy="0" r="5" fill="#FFB300" />
+          <circle cx="0" cy="0" r="3" fill="#FFE082" />
+        </g>
       </svg>
     </div>
   );
 };
 
 export const GroomVector = ({ className = "w-28 h-28 sm:w-36 sm:h-36" }) => {
-  const flowerColors = ["#2196F3", "#D81B60", "#FFB300", "#AB47BC", "#2196F3", "#D81B60", "#FFB300", "#AB47BC"];
-
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
-      {/* Outer Decorative Glow & Multicoloured Floral Frame */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-300 via-rose-400 to-amber-400 p-1.5 shadow-rose-glow">
+      {/* Outer Decorative Glow & Floral Wreath Frame */}
+      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-200 via-rose-400 to-amber-300 p-1.5 shadow-rose-glow">
         <div className="w-full h-full rounded-full overflow-hidden border-2 border-ivory bg-cream shadow-inner">
           <img
             src="/assets/groom.jpg"
@@ -47,18 +99,69 @@ export const GroomVector = ({ className = "w-28 h-28 sm:w-36 sm:h-36" }) => {
           />
         </div>
       </div>
-      {/* Outer Multicoloured Floral Beaded Border Overlay */}
-      <svg className="absolute -inset-2 w-[calc(100%+16px)] h-[calc(100%+16px)] pointer-events-none" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="47" stroke="#D4AF37" strokeWidth="1.2" strokeDasharray="3 3" fill="none" opacity="0.8" />
-        {[0, 45, 90, 135, 180, 225, 270, 315].map((deg, i) => (
-          <circle
-            key={i}
-            cx={50 + 47 * Math.cos((deg * Math.PI) / 180)}
-            cy={50 + 47 * Math.sin((deg * Math.PI) / 180)}
-            r="3"
-            fill={flowerColors[i]}
-          />
-        ))}
+
+      {/* Aesthetic Multicoloured Floral Wreath Overlay */}
+      <svg className="absolute -inset-3 w-[calc(100%+24px)] h-[calc(100%+24px)] pointer-events-none" viewBox="0 0 120 120" fill="none">
+        <defs>
+          <linearGradient id="groomVineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#2196F3" />
+            <stop offset="50%" stopColor="#D4AF37" />
+            <stop offset="100%" stopColor="#FFB300" />
+          </linearGradient>
+        </defs>
+
+        {/* Circular Gold & Leaf Vine Stem */}
+        <circle cx="60" cy="60" r="54" stroke="url(#groomVineGrad)" strokeWidth="1.5" strokeDasharray="6 3" opacity="0.85" />
+
+        {/* Floral Blossom Clusters Encircling the Frame */}
+        {/* Blossom 1 (Top Center: Cornflower Blue) */}
+        <g transform="translate(60, 6)">
+          <circle cx="0" cy="0" r="5.5" fill="#2196F3" />
+          <circle cx="0" cy="0" r="3.5" fill="#90CAF9" />
+          <circle cx="0" cy="0" r="1.5" fill="#0D47A1" />
+        </g>
+
+        {/* Blossom 2 (Top Right: Magenta Rose) */}
+        <g transform="translate(98, 22)">
+          <circle cx="0" cy="0" r="5" fill="#D81B60" />
+          <circle cx="0" cy="0" r="3" fill="#FF80AB" />
+        </g>
+
+        {/* Blossom 3 (Right Center: Gold Marigold) */}
+        <g transform="translate(114, 60)">
+          <circle cx="0" cy="0" r="5.5" fill="#FFB300" />
+          <circle cx="0" cy="0" r="3.5" fill="#FFE082" />
+        </g>
+
+        {/* Blossom 4 (Bottom Right: Lavender Violet) */}
+        <g transform="translate(98, 98)">
+          <circle cx="0" cy="0" r="5" fill="#AB47BC" />
+          <circle cx="0" cy="0" r="3" fill="#E1BEE7" />
+        </g>
+
+        {/* Blossom 5 (Bottom Center: Cornflower Blue) */}
+        <g transform="translate(60, 114)">
+          <circle cx="0" cy="0" r="5.5" fill="#2196F3" />
+          <circle cx="0" cy="0" r="3.5" fill="#90CAF9" />
+        </g>
+
+        {/* Blossom 6 (Bottom Left: Magenta Rose) */}
+        <g transform="translate(22, 98)">
+          <circle cx="0" cy="0" r="5" fill="#D81B60" />
+          <circle cx="0" cy="0" r="3" fill="#FF80AB" />
+        </g>
+
+        {/* Blossom 7 (Left Center: Gold Marigold) */}
+        <g transform="translate(6, 60)">
+          <circle cx="0" cy="0" r="5.5" fill="#FFB300" />
+          <circle cx="0" cy="0" r="3.5" fill="#FFE082" />
+        </g>
+
+        {/* Blossom 8 (Top Left: Lavender Violet) */}
+        <g transform="translate(22, 22)">
+          <circle cx="0" cy="0" r="5" fill="#AB47BC" />
+          <circle cx="0" cy="0" r="3" fill="#E1BEE7" />
+        </g>
       </svg>
     </div>
   );
