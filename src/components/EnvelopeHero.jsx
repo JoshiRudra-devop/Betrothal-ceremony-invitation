@@ -210,10 +210,6 @@ export const EnvelopeHero = ({ onOpen, isOpened }) => {
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-taupe flex items-center gap-2">
                   <span>{INVITATION_CONTENT.coupleTitle}</span>
                 </h2>
-                <div className="w-12 h-0.5 bg-rose-300/60 my-1" />
-                <span className="text-xs font-serif italic text-rose-800 font-medium">
-                  {INVITATION_CONTENT.ceremonyDate}
-                </span>
               </div>
             </motion.div>
 
