@@ -166,7 +166,7 @@ export const EnvelopeHero = ({ onOpen, isOpened }) => {
               </div>
             </div>
 
-            {/* Custom 100% Opaque Floral Monogram Lovebird Seal Badge */}
+            {/* Direct Cutout Floral Monogram Lovebird Seal Badge */}
             <AnimatePresence>
               {!isOpenState && (
                 <motion.div
@@ -177,13 +177,11 @@ export const EnvelopeHero = ({ onOpen, isOpened }) => {
                     sealBroken ? 'animate-ping' : 'group-hover:scale-110'
                   } transition-transform cursor-pointer flex items-center justify-center`}
                 >
-                  <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400 bg-cream-light p-1">
-                    <img
-                      src="/assets/seal_badge.png"
-                      alt="Nandini & Meet Monogram Seal Badge"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
+                  <img
+                    src="/assets/seal_badge.png"
+                    alt="Nandini & Meet Monogram Seal Badge"
+                    className="w-full h-full object-contain filter drop-shadow-[0_10px_25px_rgba(158,75,86,0.4)]"
+                  />
                 </motion.div>
               )}
             </AnimatePresence>
