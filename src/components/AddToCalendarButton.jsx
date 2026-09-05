@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Calendar, Download, ExternalLink, ChevronDown, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { INVITATION_CONTENT } from '../config/invitationContent';
 
 export const AddToCalendarButton = ({ className = "" }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ export const AddToCalendarButton = ({ className = "" }) => {
   const eventDetails = {
     title: "Nandini & Meet's Betrothal Ceremony",
     description: "The Joshi Family cordially invites you to celebrate the Betrothal Ceremony of Nandini & Meet.",
-    location: "Mayur Restaurant, Jasons Nagar",
+    location: `${INVITATION_CONTENT.venueName}, ${INVITATION_CONTENT.venueAddress}`,
     startIso: "20260916T103000",
     endIso: "20260916T150000",
     // UTC formatted dates for Google Calendar (10:30 AM IST = 05:00 UTC)

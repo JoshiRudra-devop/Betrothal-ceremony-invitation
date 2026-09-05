@@ -35,7 +35,7 @@ export const VenueLocation = () => {
               <div className="space-y-3">
                 <div className="inline-flex items-center space-x-2 text-rose-800 text-xs font-sans uppercase tracking-widest font-bold bg-rose-100/90 px-3.5 py-1.5 rounded-full border border-rose-300/60 shadow-sm">
                   <MapPin className="w-3.5 h-3.5 text-rose-600" />
-                  <span>Jasons Nagar</span>
+                  <span>{INVITATION_CONTENT.venueAddress}</span>
                 </div>
                 <h3 className="text-3xl sm:text-4xl font-display font-bold text-taupe tracking-wide">
                   {INVITATION_CONTENT.venueName}
@@ -92,7 +92,7 @@ export const VenueLocation = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               />
               <div className="absolute top-3 left-3 bg-ivory/95 border border-rose-300 text-rose-900 text-xs px-3 py-1 rounded-full font-sans font-semibold pointer-events-none flex items-center gap-1.5 shadow-md">
-                <Compass className="w-3.5 h-3.5 text-rose-500 animate-spin" /> Mayur Restaurant
+                <Compass className="w-3.5 h-3.5 text-rose-500 animate-spin" /> {INVITATION_CONTENT.venueName}
               </div>
             </div>
 

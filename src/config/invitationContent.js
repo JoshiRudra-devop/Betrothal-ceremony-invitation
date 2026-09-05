@@ -26,8 +26,8 @@ export const INVITATION_CONTENT = {
   ceremonyDate: "16th September 2026",
   ceremonyDay: "Wednesday",
   ceremonyTime: "10:30 AM onwards",
-  venueName: "Mayur Restaurant",
-  venueAddress: "Jasons Nagar",
+  venueName: "Golden Era 2",
+  venueAddress: "Maninagar",
   contactNumbers: [
     { number: "9328201463", raw: "9328201463" },
     { number: "9904904610", raw: "9904904610" },
@@ -35,8 +35,8 @@ export const INVITATION_CONTENT = {
   ],
 
   // Venue Links & Map Token Placeholders
-  googleMapLink: "[GOOGLE MAP LINK]",
-  googleMapEmbedUrl: "https://maps.google.com/maps?q=Mayur%20Restaurant%20Jasons%20Nagar&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  googleMapLink: "https://maps.app.goo.gl/KzkvCkEEywHDgGvT9",
+  googleMapEmbedUrl: "https://maps.google.com/maps?q=Golden%20Era%202%20Maninagar&t=&z=15&ie=UTF8&iwloc=&output=embed",
 
   // Event Timeline (Milestones: Welcome, Ceremony, Celebration, Lunch)
   timeline: [
